@@ -23,8 +23,6 @@ module.exports = {
       },
       {
         test: /.(css|scss)$/,
-        include: path.resolve(__dirname, "/src/client"),
-        exclude: /node_modules/,
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
