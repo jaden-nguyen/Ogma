@@ -1,0 +1,25 @@
+#record-section {
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.output-box {
+    width: 500px;
+	height: 300px;
+	border: 1px solid black;
+	padding: 10px;
+	font-size: 18px;
+	line-height: 1.5;
+    margin: 0 auto;
+}
+
+.microphone {
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.microphone:hover {
+    color: burlywood;
+}
