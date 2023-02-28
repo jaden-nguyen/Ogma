@@ -4,7 +4,8 @@
         "module": "CommonJS",
         "jsx": "react",
         "esModuleInterop": true,
-        "noImplicitAny": true
+        "noImplicitAny": true,
+        "allowSyntheticDefaultImports": true,    
     },
     "include": ["src/**/*"]
 }
