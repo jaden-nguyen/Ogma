@@ -1,5 +1,7 @@
-import React from "react";
+import React from 'react'
 
 export default function Record() {
-  return <div>Record</div>;
+  return (
+    <div>Record</div>
+  )
 }
