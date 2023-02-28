@@ -31,5 +31,6 @@ export default function Home() {
 
 const activeStyle = {
   // active link styling
-  color: "red",
+  backgroundColor: "black",
+  transition: "all 0.3s ease-in-out",
 };

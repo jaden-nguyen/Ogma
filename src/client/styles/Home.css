@@ -8,18 +8,50 @@
 .output-box {
     width: 500px;
 	height: 300px;
-	border: 1px solid black;
+	border: 3px solid black;
+    border-radius: 9px;
 	padding: 10px;
 	font-size: 18px;
 	line-height: 1.5;
     margin: 0 auto;
+    background-color: white;
 }
 
 .microphone {
     cursor: pointer;
     border-radius: 100%;
+    border: none;
+    padding: 2rem;
+    transition: 0.3s ease-out;
+    border: 3px solid;
 }
 
 .microphone:hover {
-    color: burlywood;
+    background-color: #006466;
+}
+
+.microphone:active {
+    background-color: rgb(88, 88, 88);
+    transform: scale(0.9);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  
+}
+
+.navbar a {
+    text-decoration: none;
+    border-radius: 9px;
+    border: 3px solid black;
+    padding: 1rem 4rem;
+    color: white;
+}
+
+#record-section {
+    padding: 4rem;
 }
