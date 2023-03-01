@@ -1,3 +1,5 @@
+import { SetStateAction } from "react";
+
 export interface SavedProps {
     userId: number;
   }
@@ -19,4 +21,11 @@ export interface SavedModuleProps {
 export interface User {
     username: string;
     password: string;
+}
+
+
+export type LoginProps = {
+    isLoggedIn: boolean;
+    setIsLoggedIn: (newValue: boolean) => void;
+    // setIsLoggedIn: React.Dispatch<SetStateAction<boolean>>;
 }
