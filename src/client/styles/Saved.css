@@ -1,0 +1,38 @@
+.Saved--module {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 20px;
+  color: white;
+}
+
+.Saved--module ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Saved--module li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border: solid 1px black;
+  padding: 1rem 5rem;
+  background-color: #006466;
+}
+
+
+.Saved--module li:hover {
+  background-color: #4D194D;
+  transition: 0.3s ease-out;
+}
+
+.Saved--module li:active {
+  background-color: #4D194D;
+  transition: 0.3s ease-out;
+  transform: scale(0.9);
+}

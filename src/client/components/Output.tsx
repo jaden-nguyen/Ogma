@@ -1,7 +1,13 @@
 import React from "react";
 
-export default function Output() {
+type outputProps = {
+  transcript: string;
+};
+
+export default function Output(props: outputProps) {
   return (
-    <div className="output"></div>
-  )
+    <div className="output">
+      <p>{props.transcript}</p>
+    </div>
+  );
 }

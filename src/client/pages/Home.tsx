@@ -23,7 +23,7 @@ export default function Home() {
 
       <Routes>
         <Route path="/" element={<Record />} />
-        <Route path="/saved" element={<Saved />} />
+        <Route path="/saved" element={<Saved userId={1} />} />
       </Routes>
     </>
   );
