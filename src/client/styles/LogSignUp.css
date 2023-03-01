@@ -8,6 +8,16 @@
     gap: 5px;
 }
 
+.password-requirements {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    gap: 5px;
+    font-size: 15px;
+}
+
 .button-container {
     padding-top: 20px;
     align-items: center;
