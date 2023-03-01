@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { User } from "../../../types";
 import '../styles/LogSignUp.css';
 
@@ -7,11 +8,17 @@ const SignUp: React.FC = () => {
   const [password, setPassword] = useState<User | null>(userObj);
 
   const handleUser = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(prevUser => ({ ...prevUser, username: event.target.value }));
+    setUsername(prevUser => ({ ...prevUser, username: event.target.value }));
+    console.log(username.username);
   }
 
   const handlePass = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(prevUser => ({ ...prevUser, password: event.target.value }));
+    console.log(password.password);
+  }
+
+  const handleSignUp = () => {
+    console.log('signing up!');
   }
 
   return (
@@ -30,8 +37,13 @@ const SignUp: React.FC = () => {
           id="password" 
           value={password.password}
           onChange={handlePass}></input>
-          
       </section> 
+      <div className="button-container">
+            <button className="login-btn" onClick={handleSignUp}>Register</button>
+          <Link to="/">
+            <button className="no-account-btn">Already have an account?</button>
+          </Link>
+        </div>
     </>
   )
 }

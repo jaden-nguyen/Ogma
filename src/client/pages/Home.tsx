@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Routes, Link, Route, NavLink } from "react-router-dom";
 import Record from "./Record";
 import Saved from "./Saved";
@@ -6,6 +6,13 @@ import SignUp from "./SignUp";
 import Login from "./Login";
 
 export default function Home() {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+ 
+  function isUserVerified() {
+    setIsLoggedIn(true);
+  }
+
   return (
     <>
       <div className="navbar">

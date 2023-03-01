@@ -4,10 +4,10 @@ type outputProps = {
   transcript: string;
 };
 
-export default function Output(props: outputProps) {
+export default function Output({transcript}: outputProps) {
   return (
     <div className="output">
-      <p>{props.transcript}</p>
+      <p>{transcript}</p>
     </div>
   );
 }
