@@ -1,0 +1,35 @@
+.login-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+    gap: 5px;
+}
+
+.button-container {
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.login-btn {
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-out;
+    border: 3px solid;
+    background-color: #006466;
+    transform: scale(0.9);
+}
+
+.no-account-btn {
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-out;
+    border: 3px solid;
+    background-color: #006466;
+    transform: scale(0.9);
+}

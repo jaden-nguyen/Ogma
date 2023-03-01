@@ -15,3 +15,8 @@ export interface SavedModuleProps {
     handleTranscriptClick: (transcript: Transcript) => void;
     selectedTranscript: Transcript;
 }
+
+export interface User {
+    username: string;
+    password: string;
+}

@@ -47,13 +47,8 @@
     transform: scale(0.9);
 }
 
-.stoprecording:hover {
-
-}
-
 .stoprecording:active {
     background-color: rgb(151, 0, 0);
-    
 }
 
 .saved {
@@ -65,22 +60,14 @@
     transform: scale(0.9);
 }
 
-.saved:hover {
-
-}
-
 .saved:active {
     background-color: rgb(197, 211, 0);
-    
 }
 
 #true {
     background-color: rgb(197, 211, 0) !important;
     transform: scale(0.8);
 }
-
-
-
 
 .navbar {
     display: flex;
