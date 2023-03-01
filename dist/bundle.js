@@ -86,7 +86,7 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
   \****************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nfunction App() {\r\n    return (react_1.default.createElement(\"div\", null,\r\n        react_1.default.createElement(\"h1\", null, \"Hello\")));\r\n}\r\nexports[\"default\"] = App;\r\n\n\n//# sourceURL=webpack://ogma/./src/client/App.tsx?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nfunction App() {\n    return (react_1.default.createElement(\"div\", null,\n        react_1.default.createElement(\"h1\", null, \"Hello\")));\n}\nexports[\"default\"] = App;\n\n\n//# sourceURL=webpack://ogma/./src/client/App.tsx?");
 
 /***/ }),
 
@@ -96,7 +96,7 @@ eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod)
   \******************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst client_1 = __importDefault(__webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\"));\r\nconst App_1 = __importDefault(__webpack_require__(/*! ./App */ \"./src/client/App.tsx\"));\r\nconst root = client_1.default.createRoot(document.getElementById('root'));\r\nroot.render(react_1.default.createElement(App_1.default, null));\r\n\n\n//# sourceURL=webpack://ogma/./src/client/index.tsx?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nconst client_1 = __importDefault(__webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\"));\nconst App_1 = __importDefault(__webpack_require__(/*! ./App */ \"./src/client/App.tsx\"));\n// render(\n//     <App />,\n//     document.getElementById('root')\n// );\nconst root = client_1.default.createRoot(document.getElementById('root'));\nroot.render(react_1.default.createElement(react_1.default.StrictMode, null,\n    react_1.default.createElement(App_1.default, null)));\n\n\n//# sourceURL=webpack://ogma/./src/client/index.tsx?");
 
 /***/ })
 
