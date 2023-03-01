@@ -28,15 +28,15 @@ export default function Home() {
         </div>
       ) : null}
         <SlideRoutes>
-        <Route
-          path="/"
-          element={
-            <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-          }
-        />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/home" element={<Record />} />
-        <Route path="/saved" element={<Saved userId={1} />} />
+          <Route
+            path="/"
+            element={
+              <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            }
+          />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/home" element={<Record />} />
+          <Route path="/saved" element={<Saved userId={1} />} />
         </SlideRoutes>
     </>
   );
