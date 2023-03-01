@@ -6,7 +6,7 @@
   height: 100%;
   width: 100%;
   padding: 0 20px;
-  color: white;
+  color: #EEEEEE;
 }
 
 .Saved--module ul {
@@ -20,19 +20,21 @@
   margin: 0;
   padding: 0;
   cursor: pointer;
-  border: solid 1px black;
+  border: none;
+  border-radius: 9px;
   padding: 1rem 5rem;
-  background-color: #006466;
+  color: #222831;
+  background-color: #EEEEEE;
 }
 
 
 .Saved--module li:hover {
-  background-color: #4D194D;
+  background-color: #00ADB5;
   transition: 0.3s ease-out;
 }
 
 .Saved--module li:active {
-  background-color: #4D194D;
+  background-color: #00ADB5;
   transition: 0.3s ease-out;
   transform: scale(0.9);
 }
