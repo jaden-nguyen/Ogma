@@ -1,4 +1,4 @@
-const db = require('../Models/Conversations');
+const db = require('../Models/Model');
 
 module.exports = {
     //Post messages
@@ -28,8 +28,8 @@ module.exports = {
     },
 
     getMessages: function (req: any, res: any, next: any) {
-        const user_Id = req.body.user_Id;
-        // console.log('this is the id', user_Id)
+        const user_Id = req.cookies.token
+        console.log('this is the id', user_Id)
         const messagesQuery = `SELECT * FROM conversations WHERE user_Id = ${user_Id}`;
          db.query(messagesQuery)
            .then ((data:any) => {
