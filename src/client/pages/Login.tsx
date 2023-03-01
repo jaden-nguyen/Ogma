@@ -8,8 +8,6 @@ const Login: React.FC<LoginProps> = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
   const [username, setUsername] = useState<User | null>(userObj);
   const [password, setPassword] = useState<User | null>(userObj);
-  const [categories, setCategories] = useState(false);
-  const [checkPass, setCheckPass] = useState(false);
 
   const handleUser = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername((prevUser) => ({ ...prevUser, username: event.target.value }));
@@ -17,18 +15,9 @@ const Login: React.FC<LoginProps> = ({ setIsLoggedIn }) => {
   };
 
   const handlePass = (event: React.ChangeEvent<HTMLInputElement>) => {
-      setPassword((prevUser) => ({ ...prevUser, password: event.target.value }));
+    setPassword((prevUser) => ({ ...prevUser, password: event.target.value }));
       
-      
-      const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).+$/;
-      if (regex.test(password.password)) setCategories(true);
-      else setCategories(false);
-      
-      if (username.username.length > 1 && 
-        password.password !== username.username) setCheckPass(true);
-      else setCheckPass(false);
-
-      console.log(password.password);
+    console.log(password.password);
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -39,11 +28,6 @@ const Login: React.FC<LoginProps> = ({ setIsLoggedIn }) => {
 
   const handleLogIn = () => {
     console.log("attempting login");
-    if (!(categories && checkPass && password.password.length >= 8)) {
-      alert('Please fill out all of the password requirements.');
-    } 
-    // else {
-
     // perform fetch 
 
     // if user is verified
@@ -75,16 +59,6 @@ const Login: React.FC<LoginProps> = ({ setIsLoggedIn }) => {
           onKeyDown={handleKeyDown}
         ></input>
       </section>
-      <section className="password-requirements">
-        <p id="pass-categories" style={{ color: categories ? passStyleActive.color: passStyle.color }}>
-            Your password must use characters from at all of these categories: uppercase letters, lowercase letters, numbers, symbols.</p>
-        <p id="pass-length" 
-          style={{ color: password.password.length >= 8 ? passStyleActive.color: passStyle.color }}>
-            Your password must at least 8 characters long.
-        </p>
-        <p id="pass-name" style={{ color: checkPass ? passStyleActive.color: passStyle.color }}>
-            Your password cannot contain your name (or a portion of your name).</p>
-      </section>
       <div className="button-container">
         <button className="login-btn" onClick={handleLogIn}>
           Login
@@ -101,15 +75,5 @@ const userObj = {
   username: "",
   password: "",
 };
-
-const passStyle = {
-  color: "#FF0000", //red
-  transition: "all 0.3s ease-in-out",
-}
-
-const passStyleActive = {
-  color: "#90EE90", //green
-  transition: "all 0.3s ease-in-out",
-}
 
 export default Login;
