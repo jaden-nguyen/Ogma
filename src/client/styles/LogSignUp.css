@@ -1,11 +1,56 @@
 .login-container {
     display: grid;
+    margin-top:5rem;
     align-items: center;
     justify-content: center;
-    color: aliceblue;
+    color: #EEEEEE;
+    text-align: center;
+    padding: 2rem;
+    gap: 5px;
+}
+
+.login-container label {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.login-container input {
+    border: none;
+    border-radius: 9px;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    background-color: #EEEEEE;
+}
+
+.login-container input:focus {
+    outline: none;
+}
+
+.button-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 10px;
     gap: 5px;
+}
+
+.button-container button {
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-out;
+    padding: 1rem;
+    font-size: 18px;
+    background-color: #006466;
+    transform: scale(0.9);
+    border-radius: 9px;
+}
+
+.login-btn:hover {
+    background-color: #00ADB5;
 }
 
 .password-requirements {

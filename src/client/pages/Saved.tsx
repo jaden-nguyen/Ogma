@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Modal } from "react-bootstrap";
 import "../styles/Saved.css";
-import SavedModule from "../components/SavedModule";
+// import "../styles/Modal.css";
 import { SavedProps, Transcript } from "../../../types";
 
 const Saved: React.FC<SavedProps> = ({ userId }) => {
-  const [selectedTranscript, setSelectedTranscript] = useState(null);
+  const [selectedTranscript, setSelectedTranscript] =
+    useState<Transcript | null>(null);
 
   const [transcripts, setTranscripts] = useState<Transcript[]>([]);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     // fetch(`/api/users/${userId}`)
@@ -18,30 +19,51 @@ const Saved: React.FC<SavedProps> = ({ userId }) => {
     setTranscripts([
       {
         id: 1,
-        title: "test",
+        title: "Lorem ipsum",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 2,
+        title: "test2",
+        text: "This is a test transcript 2",
+      },
+      {
+        id: 3,
+        title: "testing",
         text: "This is a test transcript",
       },
     ]);
   }, []);
 
-  const handleTranscriptClick = (transcript: Transcript): void => {
+  const handleTranscriptClick = (transcript: Transcript) => {
     setSelectedTranscript(transcript);
-    console.log(transcript);
-  };
-
-  const handleClose = (): void => {
-    setSelectedTranscript(null);
+    setShowModal(true);
   };
 
   return (
     <>
-      <SavedModule
-        transcripts={transcripts}
-        handleClose={handleClose}
-        selectedTranscript={selectedTranscript}
-        setSelectedTranscript={setSelectedTranscript}
-        handleTranscriptClick={handleTranscriptClick}
-      />
+      <div className="Saved--module">
+        <ul className="ulSaved">
+          {transcripts.map((transcript) => (
+            <li
+              key={transcript.id}
+              onClick={() => handleTranscriptClick(transcript)}
+            >
+              <h2 style={{ fontWeight: "600" }}>{transcript.title}</h2>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <button onClick={() => setShowModal(false)}>Close</button>
+            <span className="close" onClick={() => setShowModal(false)}></span>
+            <h2>{selectedTranscript.title}</h2>
+            <p>{selectedTranscript.text}</p>
+          </div>
+        </div>
+      )}
     </>
   );
 };

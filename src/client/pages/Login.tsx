@@ -16,23 +16,23 @@ const Login: React.FC<LoginProps> = ({ setIsLoggedIn }) => {
 
   const handlePass = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword((prevUser) => ({ ...prevUser, password: event.target.value }));
-      
+
     console.log(password.password);
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.code === 'Space') {
+    if (event.code === "Space") {
       event.preventDefault();
     }
-  }
+  };
 
   const handleLogIn = () => {
     console.log("attempting login");
-    // perform fetch 
+    // perform fetch
 
     // if user is verified
-      setIsLoggedIn(true);
-      navigate("/home");
+    setIsLoggedIn(true);
+    navigate("/home");
 
     // }
   };
