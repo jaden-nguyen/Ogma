@@ -58,6 +58,9 @@
     transition: 0.3s ease-out;
     border: none;
     transform: scale(0.9);
+    margin-left: 0.5rem;
+    background-color: rgb(197, 211, 0);
+
 }
 
 .saved:active {

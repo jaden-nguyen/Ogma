@@ -2,6 +2,9 @@
     "compilerOptions": {
         "target": "ES6",
         "module": "CommonJS",
+        "lib": ["es6", "dom"],
+        "noImplicitThis": true,
+        "strictNullChecks": true,
         "jsx": "react",
         "esModuleInterop": true,
         "noImplicitAny": true,

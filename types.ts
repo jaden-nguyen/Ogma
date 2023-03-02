@@ -13,7 +13,6 @@ export interface Transcript {
 export interface SavedModuleProps {
     handleClose: () => void;
     transcripts: Transcript[];
-    setSelectedTranscript: (transcript: Transcript) => void;
     handleTranscriptClick: (transcript: Transcript) => void;
     selectedTranscript: Transcript;
 }
@@ -29,3 +28,9 @@ export type LoginProps = {
     setIsLoggedIn: (newValue: boolean) => void;
     // setIsLoggedIn: React.Dispatch<SetStateAction<boolean>>;
 }
+
+export type ModalProps = {
+    transcript: Transcript;
+    handleClose: () => void;
+  };
+  

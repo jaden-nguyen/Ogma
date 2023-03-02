@@ -1,15 +1,25 @@
 import React, { useState } from "react";
-import { Modal } from "react-bootstrap";
 import { SavedProps, Transcript, SavedModuleProps } from "../../../types";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import Modal from "./Modal";
 
 export default function SavedModule({
   transcripts,
   handleClose,
-  setSelectedTranscript,
   handleTranscriptClick,
   selectedTranscript,
 }: SavedModuleProps) {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = (transcript: any) => {
+    handleTranscriptClick(transcript);
+    console.log("selected", selectedTranscript);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div className="Saved--module">
       <h1>Saved Transcripts</h1>
@@ -17,24 +27,14 @@ export default function SavedModule({
         {transcripts.map((transcript) => (
           <li
             key={transcript.id}
-            onClick={() => handleTranscriptClick(transcript)}
+            onClick={(transcript) => handleOpenModal(transcript)}
           >
             {transcript.title}
           </li>
         ))}
       </ul>
-      {selectedTranscript ? (
-        <Modal show={selectedTranscript !== null} onHide={handleClose}>
-          <Modal.Header>
-            <Modal.Title>{selectedTranscript.title}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <p>Transcript:{selectedTranscript.text}</p>
-          </Modal.Body>
-          <Modal.Footer>
-            <button onClick={handleClose}>Close</button>
-          </Modal.Footer>
-        </Modal>
+      {showModal ? (
+        <Modal transcript={selectedTranscript} handleClose={handleCloseModal} />
       ) : null}
     </div>
   );
