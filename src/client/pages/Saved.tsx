@@ -19,8 +19,8 @@ const Saved: React.FC<SavedProps> = ({ userId }) => {
     setTranscripts([
       {
         id: 1,
-        title: "test",
-        text: "This is a test transcript",
+        title: "Lorem ipsum",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       },
       {
         id: 2,
