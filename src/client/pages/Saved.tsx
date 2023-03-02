@@ -27,6 +27,11 @@ const Saved: React.FC<SavedProps> = ({ userId }) => {
         title: "test2",
         text: "This is a test transcript 2",
       },
+      {
+        id: 3,
+        title: "testing",
+        text: "This is a test transcript",
+      },
     ]);
   }, []);
 
